@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/62b7831ac8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Produits Cosmétiques</title>
+</head>
+
+<body>
+    <img src="img/PhotoRoom-20210816_091935 (1).webp" alt="logo">
+    <hr>
+    <nav>
+        <p>Home </p>
+        <p id="PAGE">Gestion de Produits </p>
+        <p>Gestion de Stock</p>
+        <p>Compte </p>
+        <p>Competique </p>
+    </nav>
+    <div id="green"></div>
+
+
+    <form action="#" id="FORM">
+        <label>Nom :<input type="text" id="nom" required></label>
+        <label>Marque :<input type="text" id="marque" required></label>
+        <label>Prix : <input type="number" id="prix" required></label>
+        <label>Date :<input type="date" id="date" required></label>
+        <select id="multiple-select" required>
+            <option value=""></option>
+            <option value="Hygiène et toilette">Hygiène et toilette</option>
+            <option value="Soins esthétiques">Soins esthétiques</option>
+            <option value="Produits solaires">Produits solaires</option>
+            <option value="Beauté des mains et des pieds">Beauté des mains et des pieds</option>
+            <option value="Produits de maquillage">Produits de maquillage</option>
+            <option value="Entretien capillaires">Entretien capillaires</option>
+            <option value="Parfums">Parfums</option>
+        </select>
+
+        <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+        <label for="promotion">Promotion :<input type="radio" id="checkyes" name="check" value="Yes">Yes<input
+                type="radio" id="checkno" name="check" value="No">No</label>
+        <button onclick="myFunction()" id="ajouter">Ajouter</button>
+        <button onclick="edit()" id="modifier">Modifier</button>
+
+    </form>
+    <table id="table">
+        <tr>
+            <th>Nom</th>
+            <th>Marque</th>
+            <th>Prix</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Promotion</th>
+            <th>action</th>
+        </tr>
+
+
+
+    </table>
+    <div id="popup">
+        <img src="./img/supprimer.jfif" alt="supprimer" id="supp">
+        Are you sure for that !
+        <button id="supprimer" onclick="deleterow(i) ">supprimer</button>
+        <button id="annuler" onclick="annuler()"> annuler</button>
+    </div>
+</body>
+<script src="./java.js"></script>
+
+</html>
